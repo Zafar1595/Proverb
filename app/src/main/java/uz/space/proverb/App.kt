@@ -8,14 +8,14 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import uz.space.proverb.di.adapterModule
 import uz.space.proverb.di.dataModule
-import uz.space.proverb.di.presenterModule
+import uz.space.proverb.di.viewModelModule
 
 class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        val modules = listOf(dataModule, presenterModule, adapterModule)
+        val modules = listOf(dataModule, viewModelModule, adapterModule)
         startKoin { // use AndroidLogger as Koin Logger - default Level.INFO
             androidLogger()
 

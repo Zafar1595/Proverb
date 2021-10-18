@@ -6,7 +6,7 @@ import org.koin.dsl.module
 val dataModule = module {
 }
 
-val presenterModule = module {
+val viewModelModule = module {
 }
 
 val adapterModule = module {
