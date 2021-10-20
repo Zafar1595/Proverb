@@ -37,11 +37,11 @@ android {
     }
 }
 
-ext{
+ext {
     nav_version = "2.3.5"
     koin_version = "2.1.5"
     lifecycle_version = "2.4.0-alpha03"
-
+    roomVersion = "2.3.0"
 }
 
 dependencies {
@@ -82,5 +82,31 @@ dependencies {
 
     //GsonBuilder
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    //Room
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$roomVersion")
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.3.0"
+    kapt "androidx.room:room-compiler:2.3.0"
+    implementation "androidx.room:room-ktx:2.3.0"
+    androidTestImplementation "androidx.room:room-testing:2.3.0"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+
+    // Kotlin components
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt"
 
 }

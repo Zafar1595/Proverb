@@ -1,7 +1,15 @@
 package uz.space.proverb.data
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "proverbs-table")
 data class Proverb(
-    var id: Int = 0,
-    var proverb: String = "",
-    var description: String = ""
+    @PrimaryKey
+    var id: Int,
+    @ColumnInfo(name = "proverb")
+    var proverb: String,
+    @ColumnInfo(name="description")
+    var description: String
 )

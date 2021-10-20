@@ -26,7 +26,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
         fun populateModel(model: Proverb){
             binding.apply {
                 tvProverb.text = model.proverb
-                tvDescription.text = model.description
+                tvDescription.text = model.proverb + "-" + model.description
                 itemView.setOnClickListener {
                     onItemClick.invoke(model)
                 }

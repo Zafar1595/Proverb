@@ -1,16 +1,20 @@
 package uz.space.proverb.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.google.gson.GsonBuilder
 import uz.space.proverb.R
-import uz.space.proverb.core.ResourceState
 import uz.space.proverb.data.Proverb
+import uz.space.proverb.databinding.ActionBarBinding
+import uz.space.proverb.databinding.ActionBarMainBinding
 import uz.space.proverb.databinding.FragmentMainBinding
 
 
@@ -18,8 +22,9 @@ class MainFragment : Fragment() {
 
     private var adapter = MainAdapter()
     private lateinit var binding: FragmentMainBinding
-    private val viewModel: MainViewModel = MainViewModel()
+    private lateinit var viewModel: MainViewModel
     private lateinit var navController: NavController
+    private lateinit var actBinding: ActionBarMainBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,13 +37,24 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMainBinding.bind(view)
+        actBinding = ActionBarMainBinding.bind(view)
 
         navController = Navigation.findNavController(view)
+
 
         binding.apply {
             rvProverb.adapter = adapter
         }
-        setData()
+
+        actBinding.apply {
+//            serchView
+        }
+
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel.readAllData.observe(viewLifecycleOwner, Observer { proverbs ->
+            adapter.models = proverbs
+            Log.d("zafar", proverbs.isEmpty().toString())
+        })
 
         adapter.setOnItemClickListener { model ->
             val gsonPretty = GsonBuilder().setPrettyPrinting().create()
@@ -51,28 +67,6 @@ class MainFragment : Fragment() {
             )
             val action = MainFragmentDirections.actionMainFragmentToDescriptionFragment(jsonString)
             navController.navigate(action)
-        }
-    }
-
-    private fun setData() {
-        viewModel.getAllProvebs()
-        setUpObservers()
-    }
-
-    private fun setUpObservers() {
-
-        viewModel.proverbList.observe(viewLifecycleOwner){
-            when(it.status){
-                ResourceState.LOADING ->{
-
-                }
-                ResourceState.SUCCESS ->{
-                    adapter.models = it.data!!
-                }
-                ResourceState.ERROR ->{
-                    //showMEssage
-                }
-            }
         }
     }
 
