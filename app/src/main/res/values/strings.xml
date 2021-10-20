@@ -2,4 +2,11 @@
     <string name="app_name">Proverb</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">О программе</string>
+    <string name="description">Описание</string>
+    <string name="favorits">Избранные</string>
+    <string name="favorite_list_is_empty">Список избранных пуст!</string>
+    <string name="search">Поиск</string>
+
+
 </resources>

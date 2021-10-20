@@ -1,7 +1,10 @@
 package uz.space.proverb.ui
 
 import android.app.Application
+import android.content.Context
 import androidx.lifecycle.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import uz.space.proverb.data.Proverb
 import uz.space.proverb.data.ProverbDatabase
 import uz.space.proverb.data.ProverbRepository
@@ -14,6 +17,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val proverbDao = ProverbDatabase.getInstance(application).dao()
         repository = ProverbRepository(proverbDao)
         readAllData = repository.readAllData
+    }
+
+    fun selectFavorit(proverb: Proverb) = GlobalScope.launch {
+        repository.updateProverb(proverb)
     }
 
 }

@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_grey">#f5f5f5</color>
     <color name="black_line">#3C000000</color>
+    <color name="actionbar">#1378C5</color>
 
 </resources>

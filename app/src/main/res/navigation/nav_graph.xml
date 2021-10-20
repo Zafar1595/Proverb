@@ -14,6 +14,12 @@
         <action
             android:id="@+id/action_mainFragment_to_descriptionFragment"
             app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoritFragment"
+            app:destination="@id/favoritFragment" />
     </fragment>
     <fragment
         android:id="@+id/descriptionFragment"
@@ -23,5 +29,19 @@
         <argument
             android:name="model"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="uz.space.proverb.ui.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/favoritFragment"
+        android:name="uz.space.proverb.ui.favorit.FavoritFragment"
+        android:label="fragment_favorit"
+        tools:layout="@layout/fragment_favorit" >
+        <action
+            android:id="@+id/action_favoritFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
     </fragment>
 </navigation>

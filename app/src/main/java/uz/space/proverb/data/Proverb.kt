@@ -11,5 +11,7 @@ data class Proverb(
     @ColumnInfo(name = "proverb")
     var proverb: String,
     @ColumnInfo(name="description")
-    var description: String
+    var description: String,
+    @ColumnInfo(name = "favorit")
+    var favorit: Int
 )
