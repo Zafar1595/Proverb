@@ -109,7 +109,16 @@ class MainFragment : Fragment() {
                         val action = MainFragmentDirections.actionMainFragmentToAboutFragment()
                         navController.navigate(action)
                     }else if(it.itemId == R.id.mSettings){
-                        val action = MainFragmentDirections.actionMainFragmentToSettingsFragment()
+                        val gsonPretty = GsonBuilder().setPrettyPrinting().create()
+                        val jsonString = gsonPretty.toJson(
+                            Proverb(
+                                id = modelList[0].id,
+                                proverb = modelList[0].proverb,
+                                description = modelList[0].description,
+                                favorit = modelList[0].favorit
+                            )
+                        )
+                        val action = MainFragmentDirections.actionMainFragmentToSettingsFragment(jsonString)
                         navController.navigate(action)
                     }
                     true

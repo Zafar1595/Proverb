@@ -1,11 +1,13 @@
 package uz.space.proverb.ui.favorit
 
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import uz.space.proverb.R
 import uz.space.proverb.data.Proverb
 import uz.space.proverb.databinding.ItemFavoritListBinding
+import uz.space.proverb.settings.Settings
 
 class FavoritAdapter : RecyclerView.Adapter<FavoritAdapter.FavoritViewHolder>() {
 
@@ -26,6 +28,14 @@ class FavoritAdapter : RecyclerView.Adapter<FavoritAdapter.FavoritViewHolder>() 
             binding.apply {
                 tvProverb.text = model.proverb
                 tvDescription.text = model.proverb + " - " + model.description
+                tvProverb.setTextSize(
+                    TypedValue.COMPLEX_UNIT_SP,
+                    Settings().getTextSize(Settings.TEXT_SIZE_TITLE, itemView.context)
+                )
+                tvDescription.setTextSize(
+                    TypedValue.COMPLEX_UNIT_SP,
+                    Settings().getTextSize(Settings.TEXT_SIZE_DESCRIPTON, itemView.context)
+                )
                 itemView.setOnClickListener {
                     onItemClick.invoke(model)
                 }

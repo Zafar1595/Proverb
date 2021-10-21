@@ -1,6 +1,7 @@
 package uz.space.proverb.ui
 
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import uz.space.proverb.R
 import uz.space.proverb.data.Proverb
 import uz.space.proverb.databinding.ActionBarBinding
 import uz.space.proverb.databinding.FragmentDescriptionBinding
+import uz.space.proverb.settings.Settings
 
 class DescriptionFragment : Fragment() {
 
@@ -44,6 +46,11 @@ class DescriptionFragment : Fragment() {
 
         binding.apply {
             tvDescription.text = model.proverb + " - " + model.description
+
+            tvDescription.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                Settings().getTextSize(Settings.TEXT_SIZE_DESCRIPTON, requireContext())
+            )
         }
 
         actBinding.apply {

@@ -1,6 +1,7 @@
 package uz.space.proverb.ui
 
 import android.os.Bundle
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.navigation.Navigation
 import uz.space.proverb.R
 import uz.space.proverb.databinding.ActionBarBinding
 import uz.space.proverb.databinding.FragmentAboutBinding
+import uz.space.proverb.settings.Settings
 
 class AboutFragment : Fragment() {
 
@@ -37,6 +39,13 @@ class AboutFragment : Fragment() {
 
             actionBarTitle.text = context?.getString(R.string.about)
 
+        }
+
+        binding.apply {
+            tvAbout.setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                Settings().getTextSize(Settings.TEXT_SIZE_DESCRIPTON, requireContext())
+            )
         }
     }
 

@@ -1,11 +1,13 @@
 package uz.space.proverb.ui.main
 
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import uz.space.proverb.R
 import uz.space.proverb.data.Proverb
 import uz.space.proverb.databinding.ItemProverbBinding
+import uz.space.proverb.settings.Settings
 
 class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
@@ -29,6 +31,16 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
             binding.apply {
                 tvProverb.text = model.proverb
                 tvDescription.text = model.proverb + " - " + model.description
+
+                tvProverb.setTextSize(
+                    TypedValue.COMPLEX_UNIT_SP,
+                    Settings().getTextSize(Settings.TEXT_SIZE_TITLE, itemView.context)
+                )
+                tvDescription.setTextSize(
+                    TypedValue.COMPLEX_UNIT_SP,
+                    Settings().getTextSize(Settings.TEXT_SIZE_DESCRIPTON, itemView.context)
+                )
+
                 itemView.setOnClickListener {
                     onItemClick.invoke(model)
                 }
