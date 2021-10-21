@@ -5,5 +5,7 @@
         android:title="@string/about">
 
     </item>
+    <item android:id="@+id/mSettings"
+        android:title="@string/text_size"/>
 
 </menu>

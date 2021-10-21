@@ -20,7 +20,6 @@
         android:id="@+id/tvAbout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
         app:layout_constraintTop_toBottomOf="@id/actionBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +27,9 @@
         android:layout_marginEnd="8dp"
         android:padding="8dp"
         android:background="@drawable/bg_item"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_size_about"
         android:textColor="@color/black"
         android:lineSpacingMultiplier="1.2"
-
         />
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

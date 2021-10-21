@@ -1,4 +1,4 @@
-package uz.space.proverb.ui
+package uz.space.proverb.ui.main
 
 import android.app.Application
 import android.content.Context

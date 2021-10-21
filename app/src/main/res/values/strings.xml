@@ -7,6 +7,10 @@
     <string name="favorits">Избранные</string>
     <string name="favorite_list_is_empty">Список избранных пуст!</string>
     <string name="search">Поиск</string>
+    <string name="text_size">Размер текста</string>
+    <string name="test_text_size">Text size</string>
+    <string name="save">Сохранить</string>
+    <string name="MySettings">14</string>
 
 
 </resources>

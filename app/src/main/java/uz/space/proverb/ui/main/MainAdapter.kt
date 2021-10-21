@@ -1,12 +1,10 @@
-package uz.space.proverb.ui
+package uz.space.proverb.ui.main
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import uz.space.proverb.R
 import uz.space.proverb.data.Proverb
-import uz.space.proverb.databinding.FragmentMainBinding
 import uz.space.proverb.databinding.ItemProverbBinding
 
 class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {

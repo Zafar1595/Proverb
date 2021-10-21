@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="uz.space.proverb.ui.MainFragment"
+        android:name="uz.space.proverb.ui.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main"
         >
@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_mainFragment_to_favoritFragment"
             app:destination="@id/favoritFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/descriptionFragment"
@@ -44,4 +47,9 @@
             android:id="@+id/action_favoritFragment_to_descriptionFragment"
             app:destination="@id/descriptionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="uz.space.proverb.ui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

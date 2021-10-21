@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="img_standard_height">40dp</dimen>
+    <dimen name="text_size_proverb_item">18sp</dimen>
+    <dimen name="text_size_description_item">16sp</dimen>
+    <dimen name="text_size_about">16sp</dimen>
 </resources>

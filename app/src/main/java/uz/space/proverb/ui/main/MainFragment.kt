@@ -1,11 +1,9 @@
-package uz.space.proverb.ui
+package uz.space.proverb.ui.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.PopupMenu
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,7 +12,6 @@ import androidx.navigation.Navigation
 import com.google.gson.GsonBuilder
 import uz.space.proverb.R
 import uz.space.proverb.data.Proverb
-import uz.space.proverb.databinding.ActionBarBinding
 import uz.space.proverb.databinding.ActionBarMainBinding
 import uz.space.proverb.databinding.FragmentMainBinding
 import uz.space.proverb.ui.favorit.Channel
@@ -110,6 +107,9 @@ class MainFragment : Fragment() {
                 popup.setOnMenuItemClickListener {
                     if (it.itemId == R.id.mInfo) {
                         val action = MainFragmentDirections.actionMainFragmentToAboutFragment()
+                        navController.navigate(action)
+                    }else if(it.itemId == R.id.mSettings){
+                        val action = MainFragmentDirections.actionMainFragmentToSettingsFragment()
                         navController.navigate(action)
                     }
                     true

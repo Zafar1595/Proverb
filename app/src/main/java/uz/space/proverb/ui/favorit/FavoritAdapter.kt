@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import uz.space.proverb.R
 import uz.space.proverb.data.Proverb
 import uz.space.proverb.databinding.ItemFavoritListBinding
-import uz.space.proverb.databinding.ItemProverbBinding
-import uz.space.proverb.ui.MainAdapter
 
 class FavoritAdapter : RecyclerView.Adapter<FavoritAdapter.FavoritViewHolder>() {
 
