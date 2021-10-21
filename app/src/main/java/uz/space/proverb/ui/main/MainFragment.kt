@@ -51,6 +51,9 @@ class MainFragment : Fragment() {
             serchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
                 androidx.appcompat.widget.SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
+                    if (p0 != null) {
+                        search(p0)
+                    }
                     return false
                 }
 
@@ -65,7 +68,7 @@ class MainFragment : Fragment() {
             imgFavorit.setOnClickListener {
                 var favoritList: MutableList<Proverb> = mutableListOf()
                 modelList.forEach {
-                    if(it.favorit == 1) favoritList.add(it)
+                    if (it.favorit == 1) favoritList.add(it)
                 }
                 Channel.proverbs = favoritList
                 val action = MainFragmentDirections.actionMainFragmentToFavoritFragment()
@@ -108,7 +111,7 @@ class MainFragment : Fragment() {
                     if (it.itemId == R.id.mInfo) {
                         val action = MainFragmentDirections.actionMainFragmentToAboutFragment()
                         navController.navigate(action)
-                    }else if(it.itemId == R.id.mSettings){
+                    } else if (it.itemId == R.id.mSettings) {
                         val gsonPretty = GsonBuilder().setPrettyPrinting().create()
                         val jsonString = gsonPretty.toJson(
                             Proverb(
@@ -118,7 +121,8 @@ class MainFragment : Fragment() {
                                 favorit = modelList[0].favorit
                             )
                         )
-                        val action = MainFragmentDirections.actionMainFragmentToSettingsFragment(jsonString)
+                        val action =
+                            MainFragmentDirections.actionMainFragmentToSettingsFragment(jsonString)
                         navController.navigate(action)
                     }
                     true
