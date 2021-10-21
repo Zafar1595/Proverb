@@ -12,4 +12,7 @@ interface ProverbDao {
 
     @Update
     suspend fun updateProverb(proverb: Proverb)
+
+    @Query("SELECT * FROM `proverbs-table` WHERE proverb LIKE :proverb")
+    fun searchData(proverb: String): LiveData<List<Proverb>>
 }

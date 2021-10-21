@@ -23,4 +23,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         repository.updateProverb(proverb)
     }
 
+    fun searchDatabase(proverb: String): LiveData<List<Proverb>>{
+        return repository.searchDatabase(proverb)
+    }
+
 }

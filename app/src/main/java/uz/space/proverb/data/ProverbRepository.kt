@@ -8,4 +8,8 @@ class ProverbRepository(private val proverbDao: ProverbDao) {
 
     suspend fun updateProverb(proverb: Proverb) = proverbDao.updateProverb(proverb)
 
+    fun searchDatabase(proverb: String): LiveData<List<Proverb>>{
+        return proverbDao.searchData(proverb)
+    }
+
 }

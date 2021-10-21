@@ -135,15 +135,21 @@ class MainFragment : Fragment() {
     }
 
     private fun search(proverb: String) {
-        val listSorted: MutableList<Proverb> = mutableListOf()
+        var str = "%$proverb%"
 
-        modelList.forEach {
-            if (it.proverb.lowercase(Locale.ROOT).contains(proverb.lowercase(Locale.ROOT))) {
-                listSorted.add(it)
+        viewModel.searchDatabase(str).observe(this, { list ->
+            list.let {
+                adapter.models = it
             }
-        }
-
-        adapter.models = listSorted
+        })
+//        val listSorted: MutableList<Proverb> = mutableListOf()
+//
+//        modelList.forEach {
+//            if (it.proverb.lowercase(Locale.ROOT).contains(proverb.lowercase(Locale.ROOT))) {
+//                listSorted.add(it)
+//            }
+//        }
+//        adapter.models = listSorted
     }
 
 
