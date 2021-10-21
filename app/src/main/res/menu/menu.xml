@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/mInfo"
+    <item
+        android:id="@+id/mSettings"
+        android:title="@string/text_size" />
+    <item
+        android:id="@+id/mInfo"
         android:title="@string/about">
-
     </item>
-    <item android:id="@+id/mSettings"
-        android:title="@string/text_size"/>
 
 </menu>
