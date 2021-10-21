@@ -42,8 +42,8 @@ class SettingsFragment : Fragment() {
         val gson = Gson()
         model = gson.fromJson(strModel, Proverb::class.java)
 
-        var textSize = 0F
-        var textSizeTitle = 0F
+        var textSizeDescription = Settings().getTextSize(Settings.TEXT_SIZE_DESCRIPTON, requireContext())
+        var textSizeTitle = Settings().getTextSize(Settings.TEXT_SIZE_TITLE, requireContext())
         binding = FragmentSettingsBinding.bind(view)
         actBinding = ActionBarSettingBinding.bind(view)
         binding.apply {
@@ -51,7 +51,7 @@ class SettingsFragment : Fragment() {
                 Settings().getTextSize(Settings.TEXT_SIZE_DESCRIPTON, requireContext()).toInt()
             seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(p0: SeekBar?, progress: Int, p2: Boolean) {
-                    textSize = progress.toFloat()
+                    textSizeDescription = progress.toFloat()
                     tvDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, progress.toFloat())
 
                 }
@@ -103,7 +103,7 @@ class SettingsFragment : Fragment() {
             btnSave.setOnClickListener {
                 Settings().setTextSize(Settings.TEXT_SIZE_TITLE, textSizeTitle, requireContext())
 
-                Settings().setTextSize(Settings.TEXT_SIZE_DESCRIPTON, textSize, requireContext())
+                Settings().setTextSize(Settings.TEXT_SIZE_DESCRIPTON, textSizeDescription, requireContext())
                 Toast.makeText(
                     requireContext(),
                     context?.getString(R.string.settings_saved),
