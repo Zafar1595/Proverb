@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Proverb</string>
+
+    <string name="app_name">Зооним нақыл-мақаллар</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about">Бағдарлама ҳаққында</string>
@@ -14,19 +15,32 @@
     <string name="settings_saved">Сазламалар сақланды</string>
     <string name="default_settings">Сазламаларды бийкарлаў</string>
     <string name="title">Атамасы</string>
+    <string name="about_info">
+        Программада зоонимлик нақыл-мақаллар ҳәм фразеологизмлер,
+        идиомалар берилген. Олар қарақалпақ халқының бай тарийхы,
+        этномәденияты, руўхыйлығы тилдиң  хызметиниң көпқырлылығын
+        көрсететуғын баслы белгилер болып, ҳәзирге шекем жасап келмекте.
+        Оның қурамында халық өтмиши, тили, миллийлигин, өзлигин,
+        қәдириятларын сәўлелендиретуғын баҳалы дереклер бар.
+        \n\n
+        Автор: Искендерова Елизавета Камалатдиновна
+        Контент бойынша сораўларыныз болса eliz19@inbox.ru почтасына жазып жиберин.
 
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
-<!--    <string name="about">О программе</string>-->
-<!--    <string name="description">Описание</string>-->
-<!--    <string name="favorits">Избранные</string>-->
-<!--    <string name="favorite_list_is_empty">Список избранных пуст!</string>-->
-<!--    <string name="search">Поиск</string>-->
-<!--    <string name="text_size">Размер текста</string>-->
-<!--    <string name="test_text_size">Text size</string>-->
-<!--    <string name="save">Сохранить</string>-->
-<!--    <string name="settings">Настройки</string>-->
-<!--    <string name="settings_saved">Настройки сохранены</string>-->
-<!--    <string name="default_settings">Сбросить настройки</string>-->
-<!--    <string name="title">Название</string>-->
+</string>
+
+    <!--    <string name="app_name">Proverb</string>-->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!--    <string name="about">О программе</string>-->
+    <!--    <string name="description">Описание</string>-->
+    <!--    <string name="favorits">Избранные</string>-->
+    <!--    <string name="favorite_list_is_empty">Список избранных пуст!</string>-->
+    <!--    <string name="search">Поиск</string>-->
+    <!--    <string name="text_size">Размер текста</string>-->
+    <!--    <string name="test_text_size">Text size</string>-->
+    <!--    <string name="save">Сохранить</string>-->
+    <!--    <string name="settings">Настройки</string>-->
+    <!--    <string name="settings_saved">Настройки сохранены</string>-->
+    <!--    <string name="default_settings">Сбросить настройки</string>-->
+    <!--    <string name="title">Название</string>-->
 
 </resources>

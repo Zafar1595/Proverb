@@ -30,6 +30,7 @@
         android:textSize="@dimen/text_size_about"
         android:textColor="@color/black"
         android:lineSpacingMultiplier="1.2"
+        android:text="@string/about_info"
         />
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

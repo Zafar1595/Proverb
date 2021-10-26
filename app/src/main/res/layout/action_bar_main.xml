@@ -22,7 +22,7 @@
         android:background="@drawable/bg_item"
         app:iconifiedByDefault="false"
         android:elevation="10dp"
-        android:queryBackground="@android:color/transparent"
+        app:queryBackground="@android:color/transparent"
         app:defaultQueryHint="@string/search"
         />
 
