@@ -13,5 +13,7 @@ data class Proverb(
     @ColumnInfo(name="description")
     var description: String,
     @ColumnInfo(name = "favorit")
-    var favorit: Int
+    var favorit: Int,
+    @ColumnInfo(name = "all_text")
+    var allText: String
 )

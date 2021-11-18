@@ -53,7 +53,8 @@ class FavoritFragment : Fragment() {
                     id = model.id,
                     proverb = model.proverb,
                     description = model.description,
-                    favorit = model.favorit
+                    favorit = model.favorit,
+                    allText = model.allText
                 )
             )
             val action =

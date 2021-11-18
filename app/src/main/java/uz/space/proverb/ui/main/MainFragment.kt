@@ -90,7 +90,8 @@ class MainFragment : Fragment() {
                     id = model.id,
                     proverb = model.proverb,
                     description = model.description,
-                    favorit = model.favorit
+                    favorit = model.favorit,
+                    allText = model.allText
                 )
             )
             val action = MainFragmentDirections.actionMainFragmentToDescriptionFragment(jsonString)
@@ -99,7 +100,7 @@ class MainFragment : Fragment() {
 
         adapter.setOnFavoritClickListener {
             val isFavorit = if (it.favorit == 0) 1 else 0
-            viewModel.selectFavorit(Proverb(it.id, it.proverb, it.description, isFavorit))
+            viewModel.selectFavorit(Proverb(it.id, it.proverb, it.description, isFavorit, it.allText))
         }
 
         actBinding.apply {
@@ -118,7 +119,8 @@ class MainFragment : Fragment() {
                                 id = modelList[0].id,
                                 proverb = modelList[0].proverb,
                                 description = modelList[0].description,
-                                favorit = modelList[0].favorit
+                                favorit = modelList[0].favorit,
+                                allText = modelList[0].allText
                             )
                         )
                         val action =

@@ -45,7 +45,7 @@ class DescriptionFragment : Fragment() {
         model = gson.fromJson(strModel, Proverb::class.java)
 
         binding.apply {
-            tvDescription.text = model.proverb + " - " + model.description + "\n\n"
+            tvDescription.text = model.allText + "\n\n"
 
             tvDescription.setTextSize(
                 TypedValue.COMPLEX_UNIT_SP,

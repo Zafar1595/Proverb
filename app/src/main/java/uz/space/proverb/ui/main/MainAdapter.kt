@@ -30,7 +30,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
         fun populateModel(model: Proverb){
             binding.apply {
                 tvProverb.text = model.proverb
-                tvDescription.text = model.proverb + " - " + model.description
+                tvDescription.text = model.allText
 
                 tvProverb.setTextSize(
                     TypedValue.COMPLEX_UNIT_SP,
