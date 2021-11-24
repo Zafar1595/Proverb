@@ -10,8 +10,6 @@ data class Proverb(
     var id: Int,
     @ColumnInfo(name = "proverb")
     var proverb: String,
-    @ColumnInfo(name="description")
-    var description: String,
     @ColumnInfo(name = "favorit")
     var favorit: Int,
     @ColumnInfo(name = "all_text")

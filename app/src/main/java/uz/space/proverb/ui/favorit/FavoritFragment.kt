@@ -52,7 +52,6 @@ class FavoritFragment : Fragment() {
                 Proverb(
                     id = model.id,
                     proverb = model.proverb,
-                    description = model.description,
                     favorit = model.favorit,
                     allText = model.allText
                 )

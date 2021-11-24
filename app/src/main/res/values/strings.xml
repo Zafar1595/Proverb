@@ -4,7 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about">Бағдарлама ҳаққында</string>
-    <string name="description">Түсинтирме</string>
+    <string name="description">Түсиндирме</string>
     <string name="favorits">Сайландылар</string>
     <string name="favorite_list_is_empty">Сайландылар дизими бос!</string>
     <string name="search">Излеў</string>
@@ -23,8 +23,8 @@
         Оның қурамында халық өтмиши, тили, миллийлигин, өзлигин,
         қәдириятларын сәўлелендиретуғын баҳалы дереклер бар.
         \n\n
-        Автор: Искендерова Елизавета Камалатдиновна
-        Контент бойынша сораўларыныз болса eliz19@inbox.ru почтасына жазып жиберин.\n\n
+        Автор: Искендерова Елизавета Камалатдиновна\n
+        Контент бойынша сораўларыңыз болса eliz19@inbox.ru почтасына жазып жибериң.\n\n
 
 </string>
 

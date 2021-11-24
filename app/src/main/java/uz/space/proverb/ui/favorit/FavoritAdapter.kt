@@ -27,7 +27,7 @@ class FavoritAdapter : RecyclerView.Adapter<FavoritAdapter.FavoritViewHolder>() 
         fun populateModel(model: Proverb) {
             binding.apply {
                 tvProverb.text = model.proverb
-                tvDescription.text = model.proverb + " - " + model.description
+                tvDescription.text = model.allText
                 tvProverb.setTextSize(
                     TypedValue.COMPLEX_UNIT_SP,
                     Settings().getTextSize(Settings.TEXT_SIZE_TITLE, itemView.context)
